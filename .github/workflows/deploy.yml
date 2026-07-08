@@ -35,14 +35,14 @@ jobs:
               --to html5 \
               --standalone \
               --template templates/page.html \
-              --metadata lang=en \
               --metadata year=$(date +%Y) \
               -o "_site/${name}.html"
           done
-          # Friendly URLs: /privacy, /terms, /account-deletion (no .html)
+          # Friendly URLs (no .html)
           mkdir -p _site/privacy && mv _site/privacy.html _site/privacy/index.html
           mkdir -p _site/terms   && mv _site/terms.html   _site/terms/index.html
           mkdir -p _site/account-deletion && mv _site/account-deletion.html _site/account-deletion/index.html
+          mkdir -p _site/konto-loeschen   && mv _site/konto-loeschen.html   _site/konto-loeschen/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

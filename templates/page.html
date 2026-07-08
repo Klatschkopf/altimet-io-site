@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="$lang$">
+<html lang="$if(lang)$$lang$$else$en$endif$">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>$title$ · Altimet</title>
     <link rel="stylesheet" href="/assets/style.css">
     <meta name="robots" content="index, follow">
+$if(alturl)$
+    <link rel="alternate" hreflang="$if(lang)$$lang$$else$en$endif$" href="$url$">
+    <link rel="alternate" hreflang="$altlang$" href="$alturl$">
+$endif$
 </head>
 <body>
     <nav>
         <a href="/">Altimet</a>
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
-    </nav>
+$if(alturl)$        <a class="lang" href="$alturl$" data-nolang>$altlabel$</a>
+$endif$    </nav>
     <main>
 $body$
     </main>
@@ -26,5 +31,18 @@ $body$
             <a href="mailto:support@altimet.io">support@altimet.io</a>
         </p>
     </footer>
+$if(alturl)$    <script>
+    /* Cookie-free language auto-detect. Redirects once per tab to the visitor's
+       preferred language; never overrides a manual toggle within the same tab. */
+    (function () {
+        try {
+            if (sessionStorage.getItem("ld")) return;   // already handled this tab
+            sessionStorage.setItem("ld", "1");
+            var pref = (navigator.language || navigator.userLanguage || "").toLowerCase();
+            if (pref.indexOf("$altlang$") === 0) location.replace("$alturl$");
+        } catch (e) { /* storage blocked → no auto-detect, toggle still works */ }
+    })();
+    </script>
+$endif$
 </body>
 </html>
