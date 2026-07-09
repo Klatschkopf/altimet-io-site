@@ -88,25 +88,24 @@ nav .spacer{ margin-left:auto; }
 .ghost:hover{ text-decoration:none; }
 .ghost:active{ box-shadow:inset 4px 4px 9px var(--dp),inset -4px -4px 9px var(--hi); }
 
-/* ---- app mock ---- */
-.mock{ border-radius:var(--r-lg); padding:1.3rem;
+/* ---- app mock: mirrors the app's "To Do" card (title+time left, checkbox right) ---- */
+.mock{ border-radius:var(--r-lg); padding:1.4rem;
   box-shadow:12px 12px 26px var(--dp),-10px -10px 24px var(--hi); }
-.mock .m-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1.1rem; }
-.mock .m-head b{ font-size:1.15rem; letter-spacing:-.01em; }
-.mock .m-head span{ font-size:.8rem; color:var(--text-2); }
-.row{ display:flex; align-items:center; gap:.85rem; padding:.7rem .8rem; margin-bottom:.7rem;
-  border-radius:var(--r-md); box-shadow:5px 5px 11px var(--dp),-5px -5px 11px var(--hi); }
-.row:last-child{ margin-bottom:0; }
-.check{ width:24px; height:24px; border-radius:50%; flex:0 0 auto;
-  box-shadow:inset 3px 3px 6px var(--dp),inset -3px -3px 6px var(--hi); }
-.check.done{ background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  box-shadow:2px 2px 5px color-mix(in srgb,var(--accent) 40%,var(--dp));
-  display:flex; align-items:center; justify-content:center; }
-.check.done svg{ width:13px; height:13px; color:#fff; }
-.row .label{ flex:1; font-size:.95rem; }
-.row.done .label{ color:var(--text-2); text-decoration:line-through; text-decoration-color:var(--text-2); }
-.chip{ font-size:.72rem; font-weight:600; color:var(--text-2); padding:.28rem .6rem; border-radius:var(--r-pill);
-  box-shadow:inset 2px 2px 4px var(--dp),inset -2px -2px 4px var(--hi); white-space:nowrap; }
+.mock-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:1.1rem; }
+.mock-head b{ font-size:1.2rem; letter-spacing:-.01em; }
+.sort{ width:38px; height:38px; border-radius:50%; flex:0 0 auto; display:flex; align-items:center; justify-content:center;
+  box-shadow:4px 4px 9px var(--dp),-4px -4px 9px var(--hi); }
+.sort svg{ width:17px; height:17px; color:var(--text-2); }
+.task{ display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding:.85rem 1rem; margin-bottom:.8rem; border-radius:var(--r-md);
+  box-shadow:5px 5px 12px var(--dp),-5px -5px 12px var(--hi); }
+.task:last-child{ margin-bottom:0; }
+.task-title{ font-weight:600; font-size:1rem; letter-spacing:-.005em; }
+.task-time{ font-size:.8rem; color:var(--text-2); margin-top:.15rem; }
+.cbox{ width:30px; height:30px; border-radius:9px; flex:0 0 auto; display:flex; align-items:center; justify-content:center;
+  box-shadow:4px 4px 8px var(--dp),-4px -4px 8px var(--hi); }
+.cbox.checked{ box-shadow:inset 3px 3px 6px var(--dp),inset -3px -3px 6px var(--hi); }
+.cbox.checked svg{ width:16px; height:16px; color:var(--accent); }
 
 /* ---- landing sections ---- */
 .sec{ padding:clamp(2.5rem,6vw,4.5rem) 0; }

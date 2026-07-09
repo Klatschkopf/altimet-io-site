@@ -1,6 +1,11 @@
 ---
 title: A calmer way to plan your day
 layout: home
+lang: en
+altlang: de
+alturl: /startseite
+altlabel: Deutsch
+url: /
 ---
 
 ```{=html}
@@ -15,21 +20,10 @@ layout: home
     </div>
   </div>
   <div class="mock" aria-hidden="true">
-    <div class="m-head"><b>Today</b><span>Wed · 3 of 5 done</span></div>
-    <div class="row done">
-      <span class="check done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>
-      <span class="label">Morning stretch</span><span class="chip">07:00</span>
-    </div>
-    <div class="row done">
-      <span class="check done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span>
-      <span class="label">Review inbox</span><span class="chip">Work</span>
-    </div>
-    <div class="row">
-      <span class="check"></span><span class="label">Draft project brief</span><span class="chip">High</span>
-    </div>
-    <div class="row">
-      <span class="check"></span><span class="label">Evening walk</span><span class="chip">18:30</span>
-    </div>
+    <div class="mock-head"><b>To Do</b><span class="sort"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M6 12h12M9 18h6"/></svg></span></div>
+    <div class="task"><div class="task-main"><div class="task-title">Morning stretch</div><div class="task-time">07:00</div></div><span class="cbox"></span></div>
+    <div class="task"><div class="task-main"><div class="task-title">Review inbox</div><div class="task-time">08:30</div></div><span class="cbox"></span></div>
+    <div class="task"><div class="task-main"><div class="task-title">Draft project brief</div><div class="task-time">11:00</div></div><span class="cbox"></span></div>
   </div>
 </section>
 
