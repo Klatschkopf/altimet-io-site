@@ -15,6 +15,7 @@ url: /startseite
     <h1>Ein ruhigerer Weg, den Tag zu planen.</h1>
     <p class="lead">Altimet ist ein Planer für Aufgaben, Routinen und Kalender – entwickelt, um ruhig statt überladen zu wirken: weiche Oberflächen, keine Werbung und nur die Benachrichtigungen, die du selbst festlegst.</p>
     <div class="cta-row">
+      <!-- LAUNCH TODO: when Altimet is live on Google Play, replace this "Bald im..." pill with the official "Jetzt bei Google Play" badge linking to https://play.google.com/store/apps/details?id=io.altimet.app (Google Play brand guidelines require the official badge, not a custom button). Do the same on index.md. -->
       <span class="cta soon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M3 20.5v-17c0-.6.7-1 1.2-.6l14 8.5c.5.3.5 1 0 1.3l-14 8.5c-.5.3-1.2-.1-1.2-.7z"/></svg>Bald im Google Play Store</span>
       <a class="ghost" href="#inside">Was drin ist</a>
     </div>
