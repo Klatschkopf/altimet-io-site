@@ -88,8 +88,12 @@ nav .spacer{ margin-left:auto; }
 .ghost:hover{ text-decoration:none; }
 .ghost:active{ box-shadow:inset 4px 4px 9px var(--dp),inset -4px -4px 9px var(--hi); }
 
-/* ---- app mock: mirrors the app's "To Do" card (title+time left, checkbox right) ---- */
-.mock{ border-radius:var(--r-lg); padding:1.4rem;
+/* ---- app mock: mirrors the app's To Do / Done cards + depth inversion ----
+   Rule (from NeumorphicCheckbox.kt + neumorphic-depth-inversion.md):
+   a RAISED task bubble holds a SUNKEN checkbox; when a task is done the bubble
+   SINKS and its checkbox POPS OUT with the checkmark. Nested layers alternate. */
+.mock{ display:flex; flex-direction:column; gap:1.1rem; }
+.mock-card{ border-radius:var(--r-lg); padding:1.4rem;
   box-shadow:12px 12px 26px var(--dp),-10px -10px 24px var(--hi); }
 .mock-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:1.1rem; }
 .mock-head b{ font-size:1.2rem; letter-spacing:-.01em; }
@@ -100,12 +104,15 @@ nav .spacer{ margin-left:auto; }
   padding:.85rem 1rem; margin-bottom:.8rem; border-radius:var(--r-md);
   box-shadow:5px 5px 12px var(--dp),-5px -5px 12px var(--hi); }
 .task:last-child{ margin-bottom:0; }
+.task.done{ box-shadow:inset 5px 5px 11px var(--dp),inset -5px -5px 11px var(--hi); }
 .task-title{ font-weight:600; font-size:1rem; letter-spacing:-.005em; }
 .task-time{ font-size:.8rem; color:var(--text-2); margin-top:.15rem; }
-.cbox{ width:30px; height:30px; border-radius:9px; flex:0 0 auto; display:flex; align-items:center; justify-content:center;
-  box-shadow:4px 4px 8px var(--dp),-4px -4px 8px var(--hi); }
-.cbox.checked{ box-shadow:inset 3px 3px 6px var(--dp),inset -3px -3px 6px var(--hi); }
-.cbox.checked svg{ width:16px; height:16px; color:var(--accent); }
+/* unchecked box = SUNKEN (inside a raised bubble) */
+.cbox{ width:30px; height:30px; border-radius:8px; flex:0 0 auto; display:flex; align-items:center; justify-content:center;
+  box-shadow:inset 4px 4px 8px var(--dp),inset -4px -4px 8px var(--hi); }
+/* checked box = RAISED (inside a sunken bubble) + checkmark in text colour */
+.cbox.checked{ box-shadow:4px 4px 9px var(--dp),-4px -4px 9px var(--hi); }
+.cbox.checked svg{ width:16px; height:16px; color:var(--text); }
 
 /* ---- landing sections ---- */
 .sec{ padding:clamp(2.5rem,6vw,4.5rem) 0; }

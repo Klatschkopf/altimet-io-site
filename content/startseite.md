@@ -20,10 +20,15 @@ url: /startseite
     </div>
   </div>
   <div class="mock" aria-hidden="true">
-    <div class="mock-head"><b>Zu erledigen</b><span class="sort"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M6 12h12M9 18h6"/></svg></span></div>
-    <div class="task"><div class="task-main"><div class="task-title">Morgendehnung</div><div class="task-time">07:00</div></div><span class="cbox"></span></div>
-    <div class="task"><div class="task-main"><div class="task-title">Posteingang prüfen</div><div class="task-time">08:30</div></div><span class="cbox"></span></div>
-    <div class="task"><div class="task-main"><div class="task-title">Projekt-Briefing entwerfen</div><div class="task-time">11:00</div></div><span class="cbox"></span></div>
+    <div class="mock-card">
+      <div class="mock-head"><b>Zu erledigen</b><span class="sort"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M6 12h12M9 18h6"/></svg></span></div>
+      <div class="task"><div class="task-main"><div class="task-title">Morgendehnung</div><div class="task-time">07:00</div></div><span class="cbox"></span></div>
+      <div class="task"><div class="task-main"><div class="task-title">Posteingang prüfen</div><div class="task-time">08:30</div></div><span class="cbox"></span></div>
+    </div>
+    <div class="mock-card">
+      <div class="mock-head"><b>Erledigt</b></div>
+      <div class="task done"><div class="task-main"><div class="task-title">Projekt-Briefing entwerfen</div><div class="task-time">09:15</div></div><span class="cbox checked"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span></div>
+    </div>
   </div>
 </section>
 
