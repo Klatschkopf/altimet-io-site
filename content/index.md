@@ -3,6 +3,7 @@ title: A calmer way to plan your day
 layout: home
 ---
 
+```{=html}
 <section class="hero">
   <div>
     <span class="eyebrow">Android · private by design</span>
@@ -62,3 +63,4 @@ layout: home
 <section class="sec">
   <p style="color:var(--text-2);max-width:60ch;">Questions or feedback? Reach us at <a href="mailto:support@altimet.io">support@altimet.io</a>.</p>
 </section>
+```
