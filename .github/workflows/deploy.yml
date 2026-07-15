@@ -44,6 +44,7 @@ jobs:
           mkdir -p _site/account-deletion && mv _site/account-deletion.html _site/account-deletion/index.html
           mkdir -p _site/konto-loeschen   && mv _site/konto-loeschen.html   _site/konto-loeschen/index.html
           mkdir -p _site/startseite       && mv _site/startseite.html       _site/startseite/index.html
+          mkdir -p _site/datenschutz      && mv _site/datenschutz.html      _site/datenschutz/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
